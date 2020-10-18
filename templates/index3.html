@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			
+		</div>
+		<h2>Resume Model</h2>
+		
+	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+      <div class="content">
+        <label for="operation"> </label>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="Resume_text" placeholder="Enter Resume Text..." rows="7" cols="70"></textarea>
+		<br/>
+    
+		<input type="submit" class="btn-info" value="Predict">
+		
+	</form>
+		
+	</div>
+
+	
+	
+
+</body>
+</html>
